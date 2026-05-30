@@ -118,12 +118,12 @@ def build_dataset(config, use_word):
 
 class DatasetIterater(object):
     def __init__(self, batches, batch_size, device):
+        if batch_size <= 0:
+            raise ValueError("batch_size must be a positive integer")
         self.batch_size = batch_size
         self.batches = batches
         self.n_batches = len(batches) // batch_size
-        self.residue = False  # 记录batch数量是否为整数
-        if len(batches) % self.n_batches != 0:
-            self.residue = True
+        self.residue = len(batches) % batch_size != 0  # 记录batch数量是否为整数
         self.index = 0
         self.device = device
 
