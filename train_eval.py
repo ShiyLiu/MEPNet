@@ -184,3 +184,4 @@ def evaluate(config, model, data_iter, test=False):
 if __name__ == '__main__':
     vocab = pkl.load(open('info.pkl', 'rb'))
     print()
+
