@@ -177,3 +177,5 @@ def get_time_dif(start_time):
 
 if __name__ == "__main__":
     build_vocab(file_path='ISCXURL2016/train.csv', max_size=MAX_VOCAB_SIZE, min_freq=1, use_word=True)
+
+
