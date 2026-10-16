@@ -71,3 +71,5 @@ if __name__ == '__main__':
     train(config, model, train_iter, dev_iter, test_iter)
     t4 = time.time()
     print("Time usage for training: ", '%.3f s, ' % (t4 - t3), timedelta(seconds=int(round(t4 - t3))))
+
+
